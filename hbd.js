@@ -1,4 +1,5 @@
-	    function Vector(x, y) {
+
+function Vector(x, y) {
 	        this.x = x;
 	        this.y = y;
 	    };
@@ -197,3 +198,8 @@
 				return Garden.rgba(r, g, b, a);
 			}
 	    };
+		document.addEventListener('click', musicPlay);
+		function musicPlay() {
+			document.getElementById('player').play();
+			document.removeEventListener('click', musicPlay);
+		}
